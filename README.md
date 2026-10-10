@@ -95,46 +95,29 @@
   ```csharp
   private void Update()
   {
-      // 플레이어 X, Y 거리 차이 계산
+      // 플레이어 감지
       detectDisX = Mathf.Abs(pm.transform.position.x - transform.position.x);
       detectDisY = Mathf.Abs(pm.transform.position.y - transform.position.y);
-
-      // 이동 방향에 따른 레이의 발사 위치 설정
-      if (dir > 0)
+  
+      // 보스의 상태에 따라 다른 함수 호출
+      switch (bState)
       {
-          gizmos = 1;
+          case BossState.Idle: Idle(); break;
+          case BossState.Walk: Walk(); break;
+          case BossState.CloseAttack: CloseAttack(); break;
+          case BossState.FarAttack: FarAttack(); break;
+          case BossState.Damaged: break;
+          case BossState.Die: Die(); break;
       }
-
-      else if (dir < 0)
-      {
-          gizmos = -1;
-      }
-
-      // 전방 지형 및 플레이어 감지를 위한 레이 발사
-      Debug.DrawRay(transform.position + new Vector3(gizmos * 0.9f, 0, 0), Vector2.down * 1.8f, Color.red);
-      hit = Physics2D.Raycast(transform.position + new Vector3(gizmos * 0.9f, 0, 0), Vector2.down, 1.8f, mask);
   }
   ```
-  > 실시간으로 변하는 플레이어와의 거리를 매 프레임 측정하여 상태 전환의 기준으로 삼았습니다.<br>
-  적의 이동 방향의 전방 아래로 레이를 발사해 지형이 끊기는 것을 감지하여 이동을 제어하도록 구현했습니다.
+  > 적과 마찬가지로 플레이어와의 거리를 매 프레임 측정하여 상태 전환의 기준으로 삼았습니다.
   <br>
   
-* 행동 처리
+* 
   ```csharp
   private void Update()
   {
-      // 이동
-      rig.velocity = new Vector2(dir * speed, rig.velocity.y);
-
-      // 적 상태에 따른 행동 함수 호출
-      switch (eState)
-      {
-          case EnemyState.Idle: Idle(); break;
-          case EnemyState.Walk: Walk(); break;
-          case EnemyState.Attack: Attack(); break;
-          case EnemyState.Damaged: break;
-          case EnemyState.Die: Die(); break;
-      }
   }
   ```
   > 변수에 저장해둔 플레이어와의 거리 값을 기준으로 대기, 이동, 공격 중 한가지를 실행합니다.
