@@ -113,11 +113,84 @@
   ```
   > 적과 마찬가지로 플레이어와의 거리를 매 프레임 측정하여 상태 전환의 기준으로 삼았습니다.
   <br>
-  
-* 
+
+* 원거리 공격 패턴
   ```csharp
-  private void Update()
+  void FarAttack()
   {
+      // 플레이어가 거기는 가까운데 위에 있을 때
+      if (detectDisX <= 8 && detectDisY > 2.2f)
+      {
+          // 근거리 공격 상태로 전환
+          bState = BossState.CloseAttack;
+
+          // 스턴 공격만 진행하는 상태 활성화
+          OnlyStun = true;
+      }
+
+      // 타이머 시작
+      farAttackTimer += Time.deltaTime;
+
+      // 타이머가 랜덤 쿨타임을 넘었다면
+      if (farAttackTimer >= randomCoolTime)
+      {
+          // 바위 던지기 애니메이션 재생
+          anim.SetTrigger("throw");
+
+          // 랜덤 쿨타임 다시 설정
+          randomCoolTime = Random.Range(0.7f, 1.5f);
+
+          // 랜덤 각도 다시 설정
+          throwY = Random.Range(0.3f, 0.7f);
+
+          // 타이머 초기화
+          farAttackTimer = 0;
+      }
+  }
+  ```
+  > 변수에 저장해둔 플레이어와의 거리 값을 기준으로 대기, 이동, 공격 중 한가지를 실행합니다.
+  <br>
+
+* 근거리 공격 패턴
+  ```csharp
+  void CloseAttack()
+  {
+      // 근거리 공격 타이머 시작
+      closeAttackTimer += Time.deltaTime;
+
+      // 타이머가 3초가 지나면
+      if (closeAttackTimer >= 3)
+      {
+          // 랜덤으로 공격 패턴 뽑기
+          attackPattern = Random.Range(0, 2);
+  
+          // 스턴 공격만 진행하는 상태가 활성화 되어 있다면
+          if (OnlyStun == true)
+          {
+              // 뽑는 숫자 1로 고정
+              attackPattern = 1;
+          }
+
+          // 뽑은 숫자가 0이라면 할퀴기 공격
+          if (attackPattern == 0)
+          {
+              // 할퀴기 애니메이션 재생
+              anim.SetTrigger("scratch");
+
+              // 타이머 초기화
+              closeAttackTimer = 0;
+          }
+
+          // 뽑은 숫자가 1이라면 소리치기 공격
+          else if (attackPattern == 1)
+          {
+              // 소리치기 애니메이션 재생
+              anim.SetTrigger("scream");
+
+              // 타이머 초기화
+              closeAttackTimer = 0;
+          }
+      }
   }
   ```
   > 변수에 저장해둔 플레이어와의 거리 값을 기준으로 대기, 이동, 공격 중 한가지를 실행합니다.
