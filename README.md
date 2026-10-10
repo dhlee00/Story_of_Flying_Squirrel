@@ -84,8 +84,6 @@
 또한 이동 중 지형이 끊기는 곳에서 부자연스럽게 떨어지는 문제를 해결하기 위해 전방 아래로 레이캐스트를 쏴서 지형을 감지하도록 처리했습니다.
 </details>
 
-<br>
-
 <details><summary><b>보스 행동 패턴 설계</b></summary>
 
 #### 코드 [(전체 코드)](Scripts/BossManager.cs)
