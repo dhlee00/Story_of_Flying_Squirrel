@@ -2,7 +2,7 @@
 
 귀여운 날다람쥐가 친구를 구하기 위한 모험을 떠나는 2D 횡스크롤 RPG 게임입니다.
 
-<img width="654" height="368" alt="KakaoTalk_20261010_161429389" src="https://github.com/user-attachments/assets/2c423ea6-95a2-443b-a75d-4530abd59982" />
+<img width="654" height="368" alt="KakaoTalk_20261010_161429389" src="https://github.com/user-attachments/assets/83d39e64-cdeb-45f8-8aee-351d5fa003cd" />
 
 ---
 
@@ -24,8 +24,9 @@
 
 <details><summary><b>일반 적 행동 패턴 설계</b></summary>
 
-<img width="654" height="368" alt="KakaoTalk_20261008_211834369" src="https://github.com/user-attachments/assets/1f3cafb6-52b4-41c9-8d7e-f8cde5805109" />
-<img width="654" height="368" alt="KakaoTalk_20261008_213039812" src="https://github.com/user-attachments/assets/988ee148-6fca-43e6-a266-38def0de1414" />
+<img width="654" height="368" alt="KakaoTalk_20261008_211834369" src="https://github.com/user-attachments/assets/3dd656b4-a8df-4376-8e50-08bb0f0454c4" />
+<img width="654" height="368" alt="KakaoTalk_20261008_213039812" src="https://github.com/user-attachments/assets/967c52fe-c7e8-436e-84b7-c881826a706a" />
+
 
 #### 코드 [(전체 코드)](Scripts/EnemyManager.cs)
 
