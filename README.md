@@ -89,6 +89,14 @@
 
 <details><summary><b>보스 행동 패턴 설계</b></summary>
 
+<img width="654" height="368" alt="KakaoTalk_20261010_220929222_01" src="https://github.com/user-attachments/assets/2acb02f5-503e-4728-8dfe-cd88391fa483" />
+<img width="654" height="368" alt="KakaoTalk_20261010_220929222" src="https://github.com/user-attachments/assets/aa9883c7-71ec-493b-abc7-4bb40c545292" />
+<img width="654" height="368" alt="KakaoTalk_20261010_220929222_05" src="https://github.com/user-attachments/assets/9703394a-7046-41b6-a4d6-b0110cbaec31" />
+<img width="654" height="368" alt="KakaoTalk_20261010_220929222_04" src="https://github.com/user-attachments/assets/581d66b3-f13f-4fc6-a83f-a874cbac51f2" />
+<img width="654" height="368" alt="KakaoTalk_20261010_220929222_03" src="https://github.com/user-attachments/assets/aa634fd6-4246-43eb-82eb-ea22c13a5146" />
+<img width="654" height="368" alt="KakaoTalk_20261010_220929222_02" src="https://github.com/user-attachments/assets/481594fe-f8c1-4ce9-9d58-af85154915da" />
+
+
 #### 코드 [(전체 코드)](Scripts/BossManager.cs)
 
 * 플레이어 감지
