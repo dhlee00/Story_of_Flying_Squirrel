@@ -6,7 +6,7 @@
 
 ---
 
-📺 [시연 영상 (YouTube)](링크)<br>
+📺 [시연 영상 (YouTube)](https://youtu.be/luFLBAwSdSU)<br>
 🎮 [빌드 apk 다운로드 (Google Drive)](https://drive.google.com/file/d/1_LEy2sbTx3pJfmc48KK42GYTq-Kdo1ia/view?usp=drive_link)<br>
 📄 [기획서](https://github.com/dhlee00/Story_of_Flying_Squirrel/blob/main/%EB%82%A0%EB%8B%A4%EB%9E%8C%EC%A5%90%20%EC%9D%B4%EC%95%BC%EA%B8%B0%20%EA%B8%B0%ED%9A%8D%EC%84%9C.pdf)<br>
 
